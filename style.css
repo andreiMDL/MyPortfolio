@@ -12,9 +12,10 @@
 
 :root {
   --bg-color: #080808;
-  --secondary-bg-color: #131313;
+  --secondary-bg-color: #2b2b2b;
   --text-color: white;
   --main-color: #00ffee;
+  --gradient-color: linear-gradient(45deg, #00ffb3 50%, black 60% 90%, #0084ff 110%);
 }
 
 html {
@@ -25,6 +26,8 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  background-image: url(assets/bg-green-mobile.png);
+  background-size: cover;
 }
 
 .header {
@@ -32,7 +35,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 4rem 12% 4rem;
+  padding: 2rem 12% 2rem;
   background: rgb(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
   display: flex;
@@ -61,12 +64,18 @@ body {
   font-weight: 500;
   transition: 0.3s ease;
   border-bottom: 3px solid transparent;
+  
 }
 
 .navbar a:hover,
-.navbar a.active {
+.navbar .active {
   color: var(--main-color);
   border-bottom: 3px solid var(--main-color);
+  background-image: linear-gradient(35deg, #00ffb3, #0084ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 #menu-icon {
@@ -76,9 +85,13 @@ body {
   cursor: pointer;
   margin-left: auto;
 }
+
 section {
   min-height: 100vh;
   padding: 10rem 12% 10rem;
+  animation: image-appear linear backwards;
+      animation-timeline: view();
+      animation-range: 100px 500px;
 }
 
 .home {
@@ -98,7 +111,11 @@ section {
 }
 
 span {
-  color: var(--main-color);
+  background-image: linear-gradient(35deg, #00ffb3, #0084ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .logo span {
@@ -159,6 +176,11 @@ span {
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease-in-out;
+  background-image: linear-gradient(35deg, #00ffb3, #0084ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .social-icons a:hover {
@@ -171,7 +193,11 @@ span {
 .btn {
   display: inline-block;
   padding: 1rem 2.8rem;
-  background: var(--main-color);
+  background-image: linear-gradient(35deg, #00ffb3, #0084ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   box-shadow: 0 0 25px var(--main-color);
   border-radius: 4rem;
   font-size: 1.6rem;
@@ -233,7 +259,7 @@ span {
 .text-animation span::before {
   content: "Full Stack Developer";
   color: var(--main-color);
-  animation: words 20s infinite;
+  animation: words 25s infinite;
 }
 
 .text-animation span::after {
@@ -244,7 +270,7 @@ span {
   height: 100%;
   border-left: 3px solid var(--bg-color);
   right: -8px;
-  animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+  animation: cursor 0.6s infinite, typing 25s steps(14) infinite;
 }
 
 @keyframes cursor {
@@ -261,13 +287,13 @@ span {
     content: "Backend Developer";
   }
   41%, 60% {
-    content: "Software Engineer";
+    content: "Full Stack Developer";
   }
   61%, 80% {
-    content: "Software Tester";
+    content: "Frontend Developer";
   }
   81%, 100% {
-    content: "QA Engineer";
+    content: "Backend Developer";
   }
 }
 
@@ -288,123 +314,124 @@ span {
   margin: 5rem 0;
 }
 
-.education {
+.skills {
   padding: 100px 15px;
-  background: var(--secondary-bg-color);
+
 }
 
-.education h2 {
+.skills h2 {
   margin-bottom: 5rem;
 }
 
-.timeline-items {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.timeline-items::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 100%;
-  background-color: var(--main-color);
-  left: calc(50% - 1px);
-}
-
-.timeline-item {
-  margin-bottom: 40px;
+section.skills {
   width: 100%;
-  position: relative;
-}
+  max-width: 120rem;
+  padding: 2.5rem 2rem;
+  margin-inline: auto;
 
-.timeline-item:last-child {
-  margin-bottom: 0;
-}
+  header {
+    text-align: center;
+  }
 
-.timeline-item:nth-child(odd) {
-  padding-right: calc(50% + 30px);
-  text-align: right;
-}
+  & header span {
+    font: 500 var(--txt-sm)/1.5 var(--ff-base);
+  }
 
-.timeline-item:nth-child(even) {
-  padding-left: calc(50% + 30px);
-}
+  & img {
+    width: 100%;
+    height: auto;
+  }
 
-.timeline-dot {
-  height: 21px;
-  width: 21px;
-  background-color: var(--main-color);
-  box-shadow:
-  0 0 25px var(--main-color),
-  0 0 50px var(--main-color);
-  position: absolute;
-  left: calc(50% - 8px);
-  border-radius: 50%;
-  top: 10px;
-}
+  & .content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "A B B"
+    "C C D";
 
-.timeline-date {
-  font-size: 20px;
-  font-weight: 800;
-  color: white;
-  margin: 6px 0 15px;
-}
-
-.timeline-content {
-  background-color: var(--bg-color);
-  border: 3px solid var(--main-color);
-  padding: 30px 50px;
-  border-radius: 4rem;
-  box-shadow: 0 0 10px var(--main-color);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.timeline-content:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px var(--main-color);
-}
-
-.timeline-content h3 {
-  font-size: 20px;
-  color: white;
-  margin: 0 0 10px;
-  font-weight: 500;
-}
-
-.timeline-content p {
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
+    gap: 2.5rem;
+  }
 }
 
 ::-webkit-scrollbar {
   appearance: none;
 }
 
-/* ::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
-} */
+section.projects {
+  width: 100%;
+  max-width: 120rem;
+  padding: 2.5rem 2rem;
+  margin-inline: auto;
 
-/* ::-webkit-scrollbar-track {
-  background-color: var(--main-color);
-  width: 50px;
-} */
+  & img {
+    width: 100%;
+    height: auto;
+  }
 
-/* services section -> trocar para projects */
+  & .content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    animation: image-appear linear backwards;
+      animation-timeline: view();
+      animation-range: 100px 500px;
+  }
+  
+  & .project h2{
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: large;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+  }
 
-.services {
-  background: var(--bg-color);
-  color: black;
-}
+  & .project img {
+    overflow: hidden;
+    border-radius: 3rem;    
+  }
 
-.services h2 {
-  margin-bottom: 5rem;
-  color: white;
+  & .project {
+    margin-bottom: 6rem;
+    transition: 500ms ease ;
+
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary-bg-color);
+    border-radius: 3rem;
+    cursor: pointer;
+    text-align: center; 
+    padding-bottom: 2rem; 
+    animation: image-appear linear backwards;
+      animation-timeline: view();
+      animation-range: 100px 500px;
+
+  }
+
+  & .project:hover {
+    scale: 1.1;
+  }
+
+  & .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.336); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+    border-radius: 1rem; 
+    z-index: 1;
+  }
+
+  & .project:hover .project-overlay {
+    opacity: 1;
+  }
 }
 
 .services-container {
@@ -418,7 +445,7 @@ span {
   background-color: var(--main-color);
   height: 300px;
   border-radius: 3rem;
-  border: 5px soilid transparent;
+  border: 5px solid transparent;
   cursor: pointer;
   transition: 0.4s ease-in-out;
 }
@@ -455,7 +482,6 @@ span {
 }
 
 .contact {
-  background-color: var(--bg-color);
 }
 
 .contact h2 {
@@ -583,7 +609,7 @@ span {
 }
 
 @media(max-width:895px) {
-  #menu-item {
+  #menu-icon {
     display: block;
   }
   .navbar {
@@ -632,5 +658,12 @@ span {
   }
   .services-container {
     grid-template-columns: repeat(1 ,1fr);
+  }
+}
+
+@keyframes image-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
