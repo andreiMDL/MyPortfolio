@@ -10,40 +10,42 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
 </head>
 <body>
 
   <header class="header">
     <i class='bx bx-menu' id="menu-icon"></i> 
     <a href="#home" class="logo">Andrei
-      <span>Moda</span>
+      <span class="highlight">Moda</span>
     </a>
     
     <nav class="navbar">
       <a href="#home" class="active">Home</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
     </nav>
   </header>
 
   <section class="home" id="home">
     <div class="home-content">
-      <h1>Hello World! I'm <span>Andrei</span></h1>
-      <h3 class="text-animation">I'm a <span></span></h3>
-      <p>Software Engineering student and aspiring Full Stack Developer. Despite the early stages of my journey, my curiosity for technology and commitment to mastering frontend and backend connections guide me. I seek opportunities to apply and evolve my skills in challenging projects.</p>
+      <h1>Hello World! Me chamo <br><span class="highlight">Andrei Moda</span></h1>
+      <h3 class="text-animation">Eu sou <span class="highlight"></span></h3>
+      <p>Estudante de Engenharia de Software e aspirante a Desenvolvedor Full Stack. Apesar de estar em estágios iniciais da
+        minha jornada, minha curiosidade por tecnologia e meu compromisso em dominar as conexões front-end e back-end me
+        guiam. Busco oportunidades para aplicar e desenvolver minhas habilidades em projetos desafiadores.</p>
 
       <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/andreimdl/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/andreiMDL" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/andreimdl/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="mailto:andreimoda8@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
       </div>
 
       <div class="btn-group">
-        <a href="#hire" class="btn">Hire</a>
-        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="btn">Fale Comigo</a>
       </div>
     </div>
       <div class="home-img">
@@ -54,111 +56,150 @@
   
   <section class="skills" id="skills">
     <h2 class="heading">Skills</h2>
-
-    <div class="services-container">
-      <div class="service-box">
-        <div class="service-info">
-          <h4>UI Design</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cumque dolor aliquam eveniet quibusdam nihil. Vel veritatis, rerum dolorem recusandae, quis labore itaque eum cum architecto velit corrupti hic. Tempora!</p>
-        </div>
+    <div class="technologies">
+      <div class="tech">
+        <i class="devicon-javascript-plain colored"></i>
       </div>
 
-      <div class="service-box">
-        <div class="service-info">
-          <h4>Frontend Developer</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe cumque dolor aliquam eveniet quibusdam nihil. Vel veritatis, rerum dolorem recusandae, quis labore itaque eum cum architecto velit corrupti hic. Tempora!</p>
-        </div>
+      <div class="tech">
+        <i class="devicon-html5-plain-wordmark colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-css3-plain-wordmark colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-vuejs-plain-wordmark colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-c-plain colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-java-plain-wordmark colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-php-plain colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-docker-plain-wordmark colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-playwright-plain colored"></i>
+      </div>
+
+      <div class="tech">
+        <i class="devicon-git-plain colored"></i>
+      </div>
+      
+      <div class="tech">
+        <i class="devicon-vitest-plain colored"></i>
+      </div>
+      
+      <div class="tech">
+        <i class="devicon-mysql-original colored"></i>
       </div>
     </div>
     </section>
     
     <section class="projects" id="projects">
-      <h2 class="heading">Projects</h2>
+      <h2 class="heading">Projetos</h2>
     
       <div class="content">
         <div class="project">
-          <img src="assets/Cupcake.png" alt="">
-          <h2>Recipe Page</h2>
-          <div class="project-overlay">
-            <a href="#" class="view-project-link" aria-label="View Recipe Page project">
-                    <i class="fas fa-eye"></i> </a>
-          </div>
+          <a href="https://andreimdl.github.io/Travelgram-Responsivo/" target="_blank"><img src="assets/Cupcake.png" alt="">
+            <h2>Recipe Page</h2>
+          </a>
         </div>
 
         <div class="project">
-          <img src="assets/Snitap.png" alt="">
-          <h2>Snitap</h2>
-          <div class="project-overlay">
-            <a href="#" class="view-project-link" aria-label="View Recipe Page project">
-                    <i class="fas fa-eye"></i> </a>
-          </div>
+          <a href="https://andreimdl.github.io/Snitap/" target="_blank">
+            <img src="assets/Snitap.png" alt="">
+            <h2>Snitap</h2>
+          </a>
         </div>
 
         <div class="project">
-          <img src="assets/TechNews.png" alt="">
-          <h2>Tech News</h2>
-          <div class="project-overlay">
-            <a href="#" class="view-project-link" aria-label="View Recipe Page project">
-                    <i class="fas fa-eye"></i> </a>
-          </div>
+          <a href="https://andreimdl.github.io/Zingen/" target="_blank">
+            <img src="assets/Zingen.png" alt="">
+            <h2>Zingen</h2>
+          </a>
         </div>
 
         <div class="project">
-          <img src="assets/Travelgram.png" alt="">
-          <h2>Travelgram</h2>
-          <div class="project-overlay">
-            <a href="#" class="view-project-link" aria-label="View Recipe Page project">
-                    <i class="fas fa-eye"></i> </a>
-          </div>
+          <a href=" https://andreimdl.github.io/formulario_matricula/" target="_blank">
+            <img src="assets/estrelas-do-amanha.png" alt="">
+            <h2>Estrelas do Amanhã</h2>
+          </a>
         </div>
 
         <div class="project">
-          <img src="assets/Tourism.png" alt="">
-          <h2>Tourism Page</h2>
-          <div class="project-overlay">
-            <a href="#" class="view-project-link" aria-label="View Recipe Page project">
-                    <i class="fas fa-eye"></i> </a>
-          </div>
+          <a href="https://andreimdl.github.io/tech_news/" target="_blank">
+            <img src="assets/TechNews.png" alt="">
+            <h2>Tech News</h2>
+          </a>
         </div>
 
         <div class="project">
-          <img src="assets/Zingen.png" alt="">
-          <h2>Zingen</h2>
-          <div class="project-overlay">
-            <a href="#" class="view-project-link" aria-label="View Recipe Page project">
-                    <i class="fas fa-eye"></i> </a>
-          </div>
+          <a href="https://andreimdl.github.io/local_turistico/" target="_blank">
+            <img src="assets/Tourism.png" alt="">
+            <h2>Tourism Page</h2>
+          </a>
         </div>
       </div>
   </section>
 
   <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-    <form action="">
+    <h2 class="heading">Fale <span class="highlight">Comigo</span></h2>
+    <form id="form" action="">
       <div class="input-group">
         <div class="input-box">
-          <input type="text" placeholder="Full Name">
-          <input type="email" placeholder="Email">
-        </div>
-        <div class="input-box">
-          <input type="number" placeholder="Phone Number">
-          <input type="text" placeholder="Subject">
+          <div class="input-field">
+            <input type="text" placeholder="Nome Completo" class="inputs required" oninput="nameValidate()">
+            <span class="span-required error">Nome deve ter no mínimo 3 caracteres</span>
+          </div>
+          <div class="input-field">
+            <input type="email" placeholder="Email" class="inputs required" oninput="emailValidate()">
+            <span class="span-required error">Digite um email válido</span>
+          </div>
+          <div class="input-field">
+            <input type="number" placeholder="Telefone" class="inputs required" oninput="phoneValidate()">
+            <span class="span-required error">Digite um telefone válido</span>
+          </div>
+          <div class="input-field">
+            <input type="text" placeholder="Assunto" class="inputs required" oninput="subjectValidate()">
+            <span class="span-required error">O campo não pode ser vazio</span>
+          </div>
         </div>
       </div>
 
       <div class="input-group-2">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
+        <div class="input-field">
+          <textarea class="inputs required" name="" id="" cols="30" rows="10" placeholder="Sua mensagem" oninput="messageValidate()"></textarea>
+          <span class="span-required error">O campo não pode ser vazio</span>
+        </div>
+        <input type="submit" value="Enviar Mensagem" class="btn">
       </div>
     </form>
   </section>
 
   <footer class="footer">
     <div class="social">
-      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-      <a href="#"><i class="fa-brands fa-github"></i></a>
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/andreimdl/" target="_blank" aria-label="LinkedIn Profile"><i
+          class="fa-brands fa-linkedin-in"></i></a>
+      
+      <a href="https://github.com/andreiMDL" target="_blank" aria-label="GitHub Profile"><i
+          class="fa-brands fa-github"></i></a>
+      
+      <a href="https://www.instagram.com/andreimdl/" target="_blank" aria-label="Instagram Profile"><i
+          class="fa-brands fa-instagram"></i></a>
+      
+      <a href="mailto:andreimoda8@gmail.com" aria-label="Send an email"><i class="fa-solid fa-envelope"></i></a>
     </div>
     <ul class="list">
       <li>
