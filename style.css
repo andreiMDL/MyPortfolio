@@ -26,7 +26,7 @@ html {
 body {
   background: var(--bg-color);
   color: var(--text-color);
-  background-image: url(assets/bg-green-mobile.png);
+  background-image: url(assets/bg-green.png);
   background-size: cover;
 }
 
@@ -506,6 +506,7 @@ section.projects {
 }
 
 @media (max-width: 1200px) {
+
   html {
     font-size: 50%;
   }
@@ -581,6 +582,10 @@ section.projects {
 }
 
 @media (max-width: 991px) {
+  body {
+    background-image: url(assets/bg-green-mobile.png);
+  }
+
   html {
     font-size: 57%;
   }
