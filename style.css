@@ -30,6 +30,10 @@ body {
   background-size: cover;
 }
 
+p {
+  font-size: 1.8rem !important;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -87,11 +91,11 @@ body {
 }
 
 section {
-  min-height: 100vh;
-  padding: 10rem 12% 10rem;
+  min-height: 80vh;
+  padding: 15rem 12% 4rem;
   animation: image-appear linear backwards;
       animation-timeline: view();
-      animation-range: 100px 500px;
+      animation-range: 0px 450px;
 }
 
 .home {
@@ -227,63 +231,37 @@ section {
   box-shadow: 0 0 10px var(--main-color);
 }
 
-.text-animation {
-  font-size: 3.5rem;
-  font-weight: 600;
-  min-width: 280px;
+h3 div {
+  display: inline-block;
+  overflow: hidden;
+  height: 5rem;
+  vertical-align: top;
 }
 
-.text-animation span {
-  position: relative;
+h3 span {
+  background-image: linear-gradient(-75deg, #00ffb3, #0084ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: block;
+  border: px solid red;
+  animation: slideUp 6s infinite ease;
 }
 
-.text-animation span::before {
-  content: "Desenvolvedor Full Stack";
-  color: var(--main-color);
-  animation: words 25s infinite;
-}
+@keyframes slideUp {
+  0%, 22% {
+    transform: translateY(0);
+  }
 
-.text-animation span::after {
-  content: "";
-  background-color: var(--bg-color);
-  position: absolute;
-  width: calc(100% + 8px);
-  height: 100%;
-  border-left: 3px solid var(--bg-color);
-  right: -8px;
-  animation: cursor 0.6s infinite, typing 25s steps(14) infinite;
-}
-
-@keyframes cursor {
-  to {
-    border-left: 2px solid var(--main-color);
+  33%, 55% {
+    transform: translateY(-5.2rem);
   }
-}
-
-@keyframes words {
-  0%, 20% {
-    content: "Desenvolvedor Frontend  ";
+  66%, 88% {
+    transform: translateY(-10.4rem);
   }
-  21%, 40% {
-    content: "Desenvolvedor Backend  ";
-  }
-  41%, 60% {
-    content: "Desenvolvedor Full Stack  ";
-  }
-  61%, 80% {
-    content: "Desenvolvedor Frontend  ";
-  }
-  81%, 100% {
-    content: "Desenvolvedor Backend  ";
-  }
-}
-
-@keyframes typing {
-  10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
-    width: 0;
-  }
-  5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
-    width: calc(100% + 8px);
+  100% {
+    transform: translateY(-15.78rem);
   }
 }
 
@@ -406,7 +384,6 @@ section.projects {
 .project img {
   object-fit: cover;
   width: 100%;
-
   border-radius: 2rem;
 }
 
@@ -521,105 +498,293 @@ section.projects {
   color: var(--main-color);
 }
 
-@media(max-width:1285px) {
-  html {
-    font-size: 55%;
-  }
-  .services-container {
-    padding-bottom: 7rem;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 5rem;
-  }
-}
-
-@media(max-width:991px) {
-  header {
-    padding: 2rem 3%;
-  }
-  section {
-    padding: 10rem 3% 2rem;
-  }
-  .timeline-items::before {
-   left: 7px; 
-  }
-  .timeline-item:nth-child(odd) {
-    padding-right: 0;
-    text-align: left;
-  }
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even) {
-    padding-left: 37px;
-  }
-  .timeline-dot {
-    left: 0;
-  }
-  .services {
-    padding-bottom: 7rem;
-  }
-  .contact form {
-    flex-direction: column;
-  }
-  .footer {
-    padding: 2rem 3%;
-  }
-}
-
-@media(max-width:895px) {
-  #menu-icon {
-    display: block;
-  }
-  .navbar {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 50%;
-    padding: 1rem 3%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(20px);
-    border-bottom-left-radius: 2rem;
-    border-left: 2px solid var(--main-color);
-    border-bottom: 2px solid var(--main-color);
-    display: none;
-  }
-  .navbar.active {
-    display: block;
-  }
-
-  .navbar a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-    color: white;
-  }
-  .home {
-    flex-direction: column-reverse;
-    margin: 5rem 4rem;
-  }
-  .home-content h3 {
-    font-size: 2.6rem;
-  }
-  .home-content h1 {
-    font-size: 8rem;
-    margin-top: 3rem;
-  }
-  .home-content p {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  .home-img img {
-    width: 56vw;
-  }
-  .services h2 {
-    margin-bottom: 3rem;
-  }
-  .services-container {
-    grid-template-columns: repeat(1 ,1fr);
-  }
-}
-
 @keyframes image-appear {
   from {
     opacity: 0;
     transform: translateY(100%);
   }
 }
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+    padding: 2rem 5% 2rem;
+  }
+
+  .navbar a {
+    margin-left: 2.5rem;
+  }
+
+  section {
+    padding: 8rem 5% 4rem;
+  }
+
+  .home {
+    gap: 8rem;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
+  }
+
+  .home-content h3 {
+    font-size: 3rem;
+  }
+
+  .home-img img {
+    width: 40vw;
+  }
+
+  .projects .content {
+    max-width: 900px;
+    gap: 2rem;
+  }
+
+  .technologies {
+    max-width: 700px;
+    gap: 3rem;
+  }
+
+  .projects .content {
+    justify-items: center;
+    display: grid;
+    align-content: center;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .projects .heading {
+    margin-bottom: 12rem;
+  }
+
+  .project {
+    margin-bottom: 3rem;
+  }
+
+  @keyframes slideUp {
+    0%, 22% {
+      transform: translateY(0);
+    }
+    33%, 55% {
+      transform: translateY(-4.3rem);
+    }
+    66%, 88% {
+      transform: translateY(-8.7rem);
+    }
+    100% {
+      transform: translateY(-13.1rem);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 57%;
+  }
+
+  .header {
+    padding: 2rem 3% 2rem;
+  }
+  
+  section {
+    margin-inline: 5rem;
+    padding: 12rem 3% 4rem;
+  }
+
+  .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  }
+  .home-content {
+    margin-right: 12rem;
+  }
+
+  .home-content h3 {
+      font-size: 2.8rem;
+  }
+
+  .home-img img {
+    width: 35vw;
+  }
+
+  h3 div {
+    height: 8rem;
+  }
+
+  .social-icons a {
+    width: 6rem;
+    height: 6rem;
+    font-size: 3.5rem;
+  }
+
+  .btn-group .btn {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    max-width: 270px;
+    font-size: 2.5rem;
+  }
+
+  .technologies {
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
+    max-width: 100%;
+  }
+  
+  .projects .content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    max-width: 100%;
+  }
+  .project {
+      max-width: 100%; 
+  }
+
+  .input-group-2 .btn {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    max-width: 270px;
+    font-size: 2.5rem !important;
+    margin: auto;
+  }
+
+  .contact form {
+    display: block;
+  }
+  .contact form .form-row {
+      flex-direction: column;
+      gap: 1.5rem; 
+  }
+  .contact form .form-field-wrapper {
+      flex: 1 1 100%;
+      min-width: unset;
+  }
+  .contact form .inputs {
+      padding: 1.5rem;
+      font-size: 1.6rem;
+  }
+  .contact form textarea {
+      min-height: 120px;
+  }
+  .contact form .btn {
+      padding: 0.8rem 2rem; 
+      font-size: 1.4rem;
+  }
+  .footer .social a {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    margin: 1.5rem 0.5rem 1.5rem 0;
+  }
+  .footer .list {
+    display: flex;
+    gap: 0.8rem;
+  }
+  .footer .list li a {
+    font-size: 1.4rem;
+  }
+  .footer .copyright {
+    font-size: 1.2rem;
+  }
+
+  @keyframes slideUp {
+    0%, 22% {
+      transform: translateY(0);
+    }
+    33%, 55% {
+      transform: translateY(-8.5rem);
+    }
+    66%, 88% {
+      transform: translateY(-17.1rem);
+    }
+    100% {
+      transform: translateY(-25.7rem);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    margin-inline: 3rem;
+  }
+
+  h3 div {
+    height: 4rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  section,
+  section.projects,
+  section.skills {
+    padding: 2rem 2% 2rem;
+    min-height: unset;
+    margin-inline: 0;
+  }
+
+  .home-content {
+    align-items: center;
+    margin: 0;
+    margin-top: 10rem;
+  }
+
+  .home-img img {
+    display: none;
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  .social-icons a {
+    margin-top: 8rem !important;
+    width: 8rem;
+    height: 8rem;
+    font-size: 3.5rem;
+    margin: 2.5rem 1.5rem 2.5rem;
+  }
+
+  .btn-group .btn{
+    margin-top:6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    gap: 1rem;
+    width: 100%;
+    font-size: 3rem;
+    padding: 3rem 2.8rem;
+  }
+
+  @keyframes slideUp {
+    0%, 22% {
+      transform: translateY(0);
+    }
+    33%, 55% {
+      transform: translateY(-4.3rem);
+    }
+    66%, 88% {
+      transform: translateY(-8.5rem);
+    }
+    100% {
+      transform: translateY(-12.6rem);
+    }
+  } 
+
+}
+
